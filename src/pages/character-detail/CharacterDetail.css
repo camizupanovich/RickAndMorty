@@ -43,4 +43,5 @@ h1{
     color:  rgb(18, 18, 18);
     font-weight: 900;
     text-shadow: 1px 2px 0px #2196f3;
+    padding: 15px;
 }
