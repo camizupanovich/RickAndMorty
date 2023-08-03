@@ -1,6 +1,7 @@
 
 
 `Technologies`: React, Javascript, Axios, MaterialUI(styling),React-toasting and Redux for the Global States
+`Deploy` in *vercel* https://rick-and-morty-gold-chi.vercel.app/
 
 ## RESPONSIVE PAGES
 `DESKTOP`
