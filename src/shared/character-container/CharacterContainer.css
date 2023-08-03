@@ -1,0 +1,21 @@
+.character-container-body{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgb(176, 176, 176);
+    background-color: white;
+}
+
+.character-container-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+.character-title{
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,14 @@
+.paginator-title-container{
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    padding-top: 8px;
+    padding-bottom: 25px;
+}
+.paginator-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+}

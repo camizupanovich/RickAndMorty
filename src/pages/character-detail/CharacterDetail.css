@@ -1,0 +1,46 @@
+.character-detail-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+}
+
+.character-detail-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+}
+
+.character-detail-image-absolute {
+    position: absolute;
+    opacity: 0.7;
+    z-index: 1;
+    width: 450px;
+}
+
+.character-detail-image-absolute-index-2 {
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    z-index: 2;
+}
+
+.character-detail-info {
+    position: relative;
+    padding: 30px;
+    background-image: url(https://th.bing.com/th/id/OIP.rknM0tKPQIYDs1vEzkc68wHaFj?pid=ImgDet&rs=1);
+    opacity: 0.7;
+    border-radius: 7px;
+}
+h1{
+    text-align: center;
+    color:  rgb(18, 18, 18);
+    font-weight: 900;
+    text-shadow: 1px 2px 0px #2196f3;
+}
