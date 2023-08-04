@@ -39,3 +39,8 @@ export function selectCharacter(characterSelected, section) {
         }
     }
 }
+export function removeCharacter(section){
+    return ({
+        type:section
+    })
+}

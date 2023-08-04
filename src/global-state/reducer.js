@@ -1,14 +1,14 @@
 const initialState = {
-    allCharacters:[],
-    paginatorInfo:{},
-    characterDetail:{},
+    allCharacters: [],
+    paginatorInfo: {},
+    characterDetail: {},
     charactersLeft: [],
     charactersRigth: [],
     infoLeft: {},
     infoRigth: {},
     characterLeftSelected: false,
     characterRigthSelected: false,
-    loadingChar:true
+    loadingChar: true
 }
 export default function rootReducer(state = initialState, action) {
     switch (action.type) {
@@ -16,13 +16,13 @@ export default function rootReducer(state = initialState, action) {
         case 'GET_CHARACTERS':
             return {
                 ...state,
-                allCharacters:action.payload.results,
+                allCharacters: action.payload.results,
                 charactersLeft: action.payload.results,
                 charactersRigth: action.payload.results,
                 paginatorInfo: action.payload.info,
                 infoLeft: action.payload.info,
                 infoRigth: action.payload.info,
-                loadingChar:false
+                loadingChar: false
             }
         //Cambia el estado de la seccion izquierda
         case 'LEFT':
@@ -30,7 +30,7 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 charactersLeft: action.payload.results,
                 infoLeft: action.payload.info,
-                loadingChar:false
+                loadingChar: false
             }
         //cambia el estado de la seccion derecha
         case 'RIGTH':
@@ -38,7 +38,7 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 charactersRigth: action.payload.results,
                 infoRigth: action.payload.info,
-                loadingChar:false
+                loadingChar: false
             }
         //selecciona un personaje de la seccion izquierda
         case 'LEFT_CHARACTER_SELECTED':
@@ -53,17 +53,27 @@ export default function rootReducer(state = initialState, action) {
                 characterRigthSelected: action.payload
             }
         case 'ALL_CHARACTERS':
-            return{
+            return {
                 ...state,
-                allCharacters:action.payload.results,
-                paginatorInfo:action.payload.info,
-                loadingChar:false
+                allCharacters: action.payload.results,
+                paginatorInfo: action.payload.info,
+                loadingChar: false
             }
-            case 'CHARACTER_DETAIL':
-                return {
-                    ...state,
-                    characterDetail: action.payload
-                }
+        case 'CHARACTER_DETAIL':
+            return {
+                ...state,
+                characterDetail: action.payload
+            }
+        case 'RIGTH_REMOVE':
+            return {
+                ...state,
+                characterRigthSelected: false
+            }
+        case 'LEFT_REMOVE':
+            return {
+                ...state,
+                characterLeftSelected: false
+            }
         default:
             return state;
     }
