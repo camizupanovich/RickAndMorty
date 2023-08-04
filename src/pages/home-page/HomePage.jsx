@@ -31,6 +31,7 @@ export default function HomePage() {
     let rigthTitle = selectedRigth ? `${selectedRigth.name} - Only Episodes` : 'You must select CHARACTER #2 to see the episodes'
     return (
         <div className='homeBody'>
+            <h1>Choose the characters and find the episodes</h1>
             <div className='grid-row cols-2'>
                 <section id='1'>
                     <CharacterContainer characters={charactersLeft} section='LEFT' next={infoLeft.next} prev={infoLeft.prev} pages={infoLeft.pages} selected={selectedRigth} title={selectedLeft} />

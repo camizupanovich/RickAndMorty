@@ -5,6 +5,7 @@
     background-color: white;
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .character-container-grid {
