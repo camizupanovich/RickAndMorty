@@ -26,9 +26,9 @@ export default function HomePage() {
             if (common) { commonEpisodes.push(a) };
         })
     }
-    let commonTitle = selectedLeft && selectedRigth ? `${selectedLeft.name} AND ${selectedRigth.name} EPISODES` : 'Select two Characters to compare EPISODES'
-    let leftTitle = selectedLeft ? `${selectedLeft.name} EPISODES` : 'You must select CHARACTER #1 to see the episodes'
-    let rigthTitle = selectedRigth ? `${selectedRigth.name} EPISODES` : 'You must select CHARACTER #2 to see the episodes'
+    let commonTitle = selectedLeft && selectedRigth ? `${selectedLeft.name} & ${selectedRigth.name} - Episodes` : 'Select two Characters to compare episodes'
+    let leftTitle = selectedLeft ? `${selectedLeft.name} - Only Episodes` : 'You must select CHARACTER #1 to see the episodes'
+    let rigthTitle = selectedRigth ? `${selectedRigth.name} - Only Episodes` : 'You must select CHARACTER #2 to see the episodes'
     return (
         <div className='homeBody'>
             <div className='grid-row cols-2'>
@@ -39,20 +39,20 @@ export default function HomePage() {
                     <CharacterContainer characters={charactersRigth} section='RIGTH' next={infoRigth.next} prev={infoRigth.prev} pages={infoRigth.pages} selected={selectedLeft} title={selectedRigth} />
                 </section>
             </div>
-            <section id='3' className='grid-row cols-3'>
+            {selectedRigth&&selectedLeft&&<section id='3' className='grid-row cols-3'>
                 <CharacterEpisodes episodes={selectedLeft.episode} title={leftTitle} />
                 <CharacterEpisodes episodes={commonEpisodes} title={commonTitle} />
                 <CharacterEpisodes episodes={selectedRigth.episode} title={rigthTitle} />
-            </section>
+            </section>}
             <div className='appBar-mobile'>
                 <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
                     <Toolbar sx={{ justifyContent: 'space-around' }}>
                         <IconButton color="inherit" >
                             <Typography><a href='#1'><EmojiEmotionsIcon></EmojiEmotionsIcon> #1</a></Typography>
                         </IconButton>
-                        <IconButton color="inherit">
+                        {selectedRigth&&selectedLeft&&<IconButton color="inherit">
                         <a href='#3'><LiveTvIcon></LiveTvIcon></a> 
-                        </IconButton>
+                        </IconButton>}
                         <IconButton color="inherit">
                             <Typography>
                            <a href='#2'><EmojiEmotionsIcon></EmojiEmotionsIcon> #2</a> 

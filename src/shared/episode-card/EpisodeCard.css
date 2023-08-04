@@ -1,22 +1,25 @@
 .episode-card-body{
-    background-color: #2196f3;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin: 4px;
+    padding: 6px;
     border-radius: 5px;
+    border: 1px solid #2196f3;
 }
 .episode{
-    color: rgb(220, 220, 220);
+    font-weight: bolder;
+    font-size: small;
+    color: rgb(44, 44, 44);
 }
 .episode-name{
     color: rgb(0, 0, 0);
     font-weight: bolder;
     text-shadow: 1px 1px 0px rgb(220, 220, 220) ;
     text-align: center;
+    font-size: small;
 }
 .episode-release-div{
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    font-size: x-small;
 }
 .episode-release{
     font-weight: bold;

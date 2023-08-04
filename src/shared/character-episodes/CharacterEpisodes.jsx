@@ -5,7 +5,7 @@ import './CharacterEpisodes.css'
 export default function CharacterEpisodes(props) {
     return (
         <div className="character-episodes-body">
-        <strong>{props.title}</strong>
+        <strong className="character-episodes-title">{props.title}</strong>
         {props &&props.episodes?.length? <div className="character-episodes-container">
             {props && props.episodes?.map((e,i) => {
                 let idEpisode=parseInt(e?.split('episode/')[1])

@@ -26,7 +26,7 @@ export default function EpisodeCard({ id }) {
     return (
         <>
             {data ? <div className="episode-card-body">
-                <strong className="episode">{data.episode}</strong>
+                <div className="episode">{data.episode}</div>
                 <div className="episode-name"> "{data.name}"</div>
                 <small className="episode-release-div"><span className="episode-release">Release: </span> {data.air_date}</small>
             </div> : null}

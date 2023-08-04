@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter>
         <NavigationBar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/playground" element={<HomePage />} />
-          <Route path="/characters" element={<CharactersPage />} />
-          <Route path="/character/:id" element={<CharacterDetail />} />
+          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/playground" element={<HomePage />} />
+          <Route exact path="/characters" element={<CharactersPage />} />
+          <Route exact path="/character/:id" element={<CharacterDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

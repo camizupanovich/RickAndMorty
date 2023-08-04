@@ -4,7 +4,6 @@ import './CharacterDetail.css'
 
 export default function CharacterDetail() {
     const char = useSelector((state) => state.characterDetail);
-    console.log(char)
     return (<>
         {char && char.name && <>
             <h1>{char.name}</h1>

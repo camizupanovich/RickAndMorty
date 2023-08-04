@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function CharacterCard(char) {
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const handleSelect = (e) => {
         e.preventDefault();
         if (char.section === 'CHARACTER_DETAIL') {
